@@ -17,4 +17,9 @@
 		<put-attribute name="body"
 			value="/WEB-INF/views/home.jsp" />
 	</definition>
+	<definition name="shop" extends="tilesbase">
+		<put-attribute name="title" value="쇼핑몰" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shop.jsp" />
+	</definition>
 </tiles-definitions>

@@ -7,4 +7,8 @@ public class HomeController {
 	public String home() {
 		return "home";
 	}
+	@RequestMapping("/shop")
+	public String shop() {
+		return "shop";
+	}
 }
