@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 public class CustomerDaoImpl implements CustomerDao {
 	@Autowired
 	private SqlSessionTemplate sst;
+	public Customer select(String id) {
+		return sst.selectOne("customerns.select", id);
+	}
 }

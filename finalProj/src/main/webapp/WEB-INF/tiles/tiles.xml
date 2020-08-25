@@ -22,4 +22,9 @@
 		<put-attribute name="body"
 			value="/WEB-INF/views/shop.jsp" />
 	</definition>
+	<definition name="joinForm" extends="tilesbase">
+		<put-attribute name="title" value="회원가입" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/joinForm.jsp" />
+	</definition>
 </tiles-definitions>
