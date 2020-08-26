@@ -7,4 +7,10 @@ import org.springframework.stereotype.Service;
 public class CustomerServiceImpl implements CustomerService {
 	@Autowired
 	private CustomerDao cd;
+	public Customer select(String id) {
+		return cd.select(id);
+	}
+	public int insert(Customer customer) {
+		return cd.insert(customer);
+	}
 }

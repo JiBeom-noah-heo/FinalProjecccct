@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<script type="text/javascript">
+	alert("로그아웃 되었습니다");
+	location.href="home";
+</script>
 </body>
 </html>

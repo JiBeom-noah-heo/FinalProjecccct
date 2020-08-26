@@ -14,7 +14,7 @@
 	<result property="ba_category"	column="ba_category"/>
 	<result property="ba_date"	column="ba_date"/>
 </resultMap>
-<select id="selectList" resultMap="bascketResult">
+<select id="selectList" resultMap="basketResult">
 	select * from basket order by ba_num
 </select>
 <insert id="add" parameterType="basket">
