@@ -5,8 +5,10 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <configuration>
 	<typeAliases>
 		<typeAlias alias="customer" type="com.shopping.KM.Customer"/>
+		<typeAlias alias="basket" type="com.shopping.manSH.Basket"/>
 	</typeAliases>
 	<mappers>
 		<mapper	resource="customer.xml" />
+		<mapper	resource="basket.xml" />
 	</mappers>
 </configuration>
