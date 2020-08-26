@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="basketns">
+<resultMap type="basket" id="basketResult">
+	<result property="ba_num"	column="ba_num"/>
+	<result property="ba_c_id"	column="ba_c_id"/>
+	<result property="ba_p_num"	column="ba_p_num"/>
+	<result property="ba_quantity"	column="ba_quantity"/>
+	<result property="ba_price"	column="ba_price"/>
+	<result property="ba_size"	column="ba_size"/>
+	<result property="ba_color"	column="ba_color"/>
+	<result property="ba_brand"	column="ba_brand"/>
+	<result property="ba_category"	column="ba_category"/>
+	<result property="ba_date"	column="ba_date"/>
+</resultMap>
+<select id="selectList" resultMap="basketResult">
+	select * from basket order by ba_num
+</select>
+<insert id="add" parameterType="basket">
+	insert into basket values (#{ba_num}, #{ba_c_id},
+		#{ba_p_num}, #{ba_quantity}, #{ba_price},
+		#{ba_size}, #{ba_color}, #{ba_brand}, #{ba_category},
+		#{ba_date})
+</insert>
+<update id="update" parameterType="basket">
+	update basket set ba_quantity=#{ba_quantity}
+</update>
+<delete id="delete" parameterType="int">
+	delete from basket where ba_num=#{ba_num}
+</delete>
+</mapper>
