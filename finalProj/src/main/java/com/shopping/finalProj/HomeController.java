@@ -24,7 +24,7 @@ public class HomeController {
 	public String basketList(Model model) {
 		Collection<Basket> list = bs.list();
 		model.addAttribute("list", list);
-		return "/basket/basketList";
+		return "basketList";
 	}
 	@RequestMapping("/addBasket")
 	public String addBasket(Basket basket, Model model) {
