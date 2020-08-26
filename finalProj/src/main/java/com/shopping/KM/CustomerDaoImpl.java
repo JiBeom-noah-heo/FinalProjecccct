@@ -9,4 +9,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	public Customer select(String id) {
 		return sst.selectOne("customerns.select", id);
 	}
+	public int insert(Customer customer) {
+		return sst.insert("customerns.insert",customer);
+	}
 }

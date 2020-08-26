@@ -10,4 +10,7 @@ public class CustomerServiceImpl implements CustomerService {
 	public Customer select(String id) {
 		return cd.select(id);
 	}
+	public int insert(Customer customer) {
+		return cd.insert(customer);
+	}
 }

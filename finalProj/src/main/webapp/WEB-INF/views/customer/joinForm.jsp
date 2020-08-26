@@ -2,30 +2,31 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html><html><head><meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="/finalProj/js/jquery.js"></script>
 <script type="text/javascript">
 	function idChk() {
-		if (!frm.id.value) { 
-			alert("아이디 입력하고 중복체크하시오");
-			frm.id.focus();
+		if (!frm.c_id.value) { 
+			alert("아이디 입력");
+			frm.c_id.focus();
 			return false;			
 		}
-		$.post('idChk','id='+frm.id.value, function(data) {
+		$.post('idChk','id='+frm.c_id.value, function(data) {
 			$('#disp').html(data);
 		});
 	}
 	function chk() {
-		if (frm.password.value != frm.password2.value) {
+		if (frm.c_password.value != frm.c_password2.value) {
 			alert("암호와 암호 확인이 다릅니다");
-			frm.password.focus(); frm.password.value="";
+			frm.c_password.focus();
+			frm.c_password.value="";
 			return false;
 		}
-	}
+	} 
 </script></head><body>
 <div class="container" align="center">
 <form action="join" method="post" name="frm" 
-	onsubmit="return chk()" enctype="multipart/form-data">
+	onsubmit="return chk()">
 	<table class="table table-bordered">
-		<caption class="text-primary">회원 가입</caption>
 		<tr>
 			<td>아이디</td>
 			<td>
@@ -65,13 +66,13 @@
 		<tr>
 			<td>주소</td>
 			<td>
-				<input type="text" name="c_address">
+				<input type="text" name="c_address" required="required">
 			</td>
 		</tr>
 		<tr>
 			<td>우편번호</td>
 			<td>
-				<input type="text" name="c_zip">
+				<input type="text" name="c_zip" required="required">
 			</td>
 		</tr>
 		<tr>
@@ -88,7 +89,7 @@
 		</tr>
 		<tr>
 			<th colspan="2">
-				<input type="submit">
+				<input type="submit" >
 			</th>
 		</tr>
 	</table>

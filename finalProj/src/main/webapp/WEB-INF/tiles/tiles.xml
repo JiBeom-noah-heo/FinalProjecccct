@@ -3,28 +3,32 @@
 "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
 "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-	<definition name="tilesbase"
-		template="/WEB-INF/views/layout.jsp">
+	<definition name="tilesbase" template="/WEB-INF/views/template/layout.jsp">
 		<put-attribute name="title" value="" />
 		<put-attribute name="header"
-			value="/WEB-INF/views/header.jsp" />
+			value="/WEB-INF/views/template/header.jsp" />
 		<put-attribute name="body" value="" />
 		<put-attribute name="footer"
-			value="/WEB-INF/views/footer.jsp" />
+			value="/WEB-INF/views/template/footer.jsp" />
 	</definition>
 	<definition name="home" extends="tilesbase">
-		<put-attribute name="title" value="안녕하세요 타일즈 샘플입니다." />
+		<put-attribute name="title" value="안녕하세요." />
 		<put-attribute name="body"
-			value="/WEB-INF/views/home.jsp" />
+			value="/WEB-INF/views/menu/home.jsp" />
 	</definition>
 	<definition name="shop" extends="tilesbase">
 		<put-attribute name="title" value="쇼핑몰" />
 		<put-attribute name="body"
-			value="/WEB-INF/views/shop.jsp" />
+			value="/WEB-INF/views/menu/shop.jsp" />
 	</definition>
 	<definition name="joinForm" extends="tilesbase">
 		<put-attribute name="title" value="회원가입" />
 		<put-attribute name="body"
-			value="/WEB-INF/views/joinForm.jsp" />
+			value="/WEB-INF/views/customer/joinForm.jsp" />
+	</definition>
+	<definition name="loginForm" extends="tilesbase">
+		<put-attribute name="title" value="로그인" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/customer/loginForm.jsp" />
 	</definition>
 </tiles-definitions>

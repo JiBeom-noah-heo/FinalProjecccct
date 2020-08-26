@@ -16,6 +16,10 @@
 	<result property="c_del" column="c_del"/>
 </resultMap>
 <select id="select" parameterType="string" resultType="customer">
-	select * from customer where id=#{id}
+	select * from customer where c_id=#{id}
 </select>
+<insert id="insert" parameterType="customer">
+		insert into customer values (#{c_id},#{c_password},#{c_name},
+		#{c_gender},#{c_address},#{c_zip},'family',#{c_email},#{c_tel},sysdate,'n')
+</insert>
 </mapper>
