@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="product_orderns">
+<resultMap type="product_order" id="product_orderResult">
+	<result property="Po_num" column="Po_num"/>
+	<result property="Po_ba_num" column="Po_ba_num"/>
+	<result property="Po_ba_c_id" column="Po_ba_c_id"/>
+	<result property="Po_ba_p_num" column="Po_ba_p_num"/>
+	<result property="Po_quantity" column="Po_quantity"/>
+	<result property="Po_size" column="Po_size"/>
+	<result property="Po_color" column="Po_color"/>
+	<result property="Po_receiver" column="Po_receiver"/>
+	<result property="Po_address" column="Po_address"/>
+	<result property="Po_zip" column="Po_zip"/>
+	<result property="Po_tel" column="Po_tel"/>
+	<result property="Po_memo" column="Po_memo"/>
+	<result property="Po_totprice" column="Po_totprice"/>
+	<result property="Po_delivno" column="Po_delivno"/>
+	<result property="Po_delivtype" column="Po_delivtype"/>
+	<result property="Po_delivplayer" column="Po_delivplayer"/>
+	<result property="Po_delivstatus" column="Po_delivstatus"/>
+	<result property="Po_purdate" column="Po_purdate"/>
+	<result property="Po_comdate" column="Po_comdate"/>
+</resultMap>
+<select id="select" parameterType="string" resultType="product_order">
+	select * from product_order where Po_num
+</select>
+<insert id="insert" parameterType="product_order">
+		insert into product_order values (#{Po_num},#{Po_ba_num},#{Po_ba_c_id},
+		#{Po_ba_p_num},#{Po_quantity},#{Po_size},#{Po_color},#{Po_receiver},
+		#{Po_address},#{Po_zip},#{Po_tel},#{Po_zip},#{Po_memo},#{Po_totprice},
+		#{Po_delivno},#{Po_delivtype},#{Po_delivplayer},#{Po_delivstatus},
+		#{Po_purdate},#{Po_comdate},)
+</insert>
+<update id="update" parameterType="product_order">
+	update product_order set Po_quantity=#{Po_quantity}
+</update>
+<delete id="delete" parameterType="int">
+	delete from product_order where Po_num=#{Po_num}
+</delete>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
