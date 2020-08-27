@@ -15,7 +15,7 @@
 		<tr><td>${basket.ba_num }</td>
 			<td><a href="">product.p_name</a></td>
 			<td>${basket.ba_brand }</td>
-			<td>${basket.ba_quantity }</td>
+			<td><input type="number" value="${basket.ba_quantity }"></td>
 			<td>${basket.ba_price }</td>
 		</tr>
 	</c:forEach>	

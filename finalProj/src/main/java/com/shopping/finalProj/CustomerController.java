@@ -51,6 +51,9 @@ public class CustomerController {
 		if(ct==null || ct.getC_del().equals("y")) {
 			result=-1;
 		}else if(ct.getC_password().equals(ct.getC_password())) {
+			if(ct.getC_id().equals("admin")) {
+				
+			}
 			result =1;
 			session.setAttribute("id",ct.getC_id());
 		}
