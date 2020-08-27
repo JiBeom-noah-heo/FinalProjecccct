@@ -22,9 +22,17 @@
 <insert id="insert" parameterType="product">
 		insert into customer values (#{p_num},#{p_pc_name},#{p_image},
 		#{p_image},#{p_name},#{p_category},#{p_brand},#{p_size},#{p_discount},
-		#{p_brand})
+		#{p_discountrate},#{p_quantity},0,sysdate)
 </insert>
 <select id="productList" resultMap="productResult">
 	select * from product
 </select>
+<update id="update" parameterType="product">
+	update product set p_pc_name=#{p_pc_name},p_image=#{p_image},p_name=#{p_name},p_category=#{p_category},
+	p_brand=#{p_brand},p_size=#{p_size},p_discount=#{p_discount},p_discountrate=#{p_discountrate},
+	p_quantity=#{p_quantity} where p_num=#{p_num}
+</update>
+<delete id="delete" parameterType="string">
+	delete from product where p_num=#{p_num}
+</delete>
 </mapper>
