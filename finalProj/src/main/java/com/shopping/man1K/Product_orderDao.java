@@ -1,6 +1,7 @@
 package com.shopping.man1K;
 
+import java.util.Collection;
+
 public interface Product_orderDao {
-	Product_order select(String id);
-	int insert(Product_order product_order);
+	Collection<Product_order> selectList();
 }
