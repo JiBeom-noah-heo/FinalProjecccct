@@ -74,4 +74,16 @@ public class CustomerController {
 		model.addAttribute("list",list);
 		return "customerList";
 	}
+	@RequestMapping("/customerUpdateForm")
+	public String customerUpdateForm(String id,Model model) {
+		Customer customer = cs.select(id);
+		model.addAttribute("customer",customer);
+		return "customerUpdateForm";
+	}
+	@RequestMapping("/customerUpdate")
+	public String customerUpdate(Customer customer,Model model) {
+		int result = cs.update(customer);
+		model.addAttribute("result",result);
+		return "/customer/customerUpdate";
+	}
 }

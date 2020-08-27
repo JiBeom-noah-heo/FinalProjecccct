@@ -17,4 +17,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	public Collection<Customer> list() {
 		return sst.selectList("customerns.selectList");
 	}
+	public int update(Customer customer) {
+		return sst.update("customerns.update",customer);
+	}
 }
