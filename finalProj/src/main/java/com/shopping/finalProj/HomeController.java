@@ -22,7 +22,7 @@ public class HomeController {
 	public String basketList(Model model) {
 		Collection<Basket> list = bs.list();
 		model.addAttribute("list", list);
-		return "/basket/basketList";
+		return "basketList";
 	}
 	@RequestMapping("/addBasket")
 	public String addBasket(Basket basket, Model model) {
@@ -32,18 +32,18 @@ public class HomeController {
 			result = bs.add(basket);
 		} else result = -1;
 		model.addAttribute("result", result);
-		return "/basket/addBasket";
+		return "addBasket";
 	}
 	@RequestMapping("/updateBasket")
 	public String updateBasket(Basket basket, Model model) {
 		int result = bs.update(basket);
 		model.addAttribute("result", result);
-		return "/basket/updateBasket";
+		return "updateBasket";
 	}
 	@RequestMapping("/deleteBasket")
 	public String deleteBasket(int ba_num, Model model) {
 		int result = bs.delete(ba_num);
 		model.addAttribute("result", result);
-		return "/basket/deleteBasket";
+		return "deleteBasket";
 	}
 }
