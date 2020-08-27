@@ -32,19 +32,19 @@ public class ProductController {
 		model.addAttribute("fileize", fileSize);
 		return "insert";
 	}
-	@RequestMapping("productList")
+	@RequestMapping("/productList")
 	public String productList(Model model) {
 		Collection<Product> list = ps.list();
 		model.addAttribute("list", list);
 		return "/product/productList";
 	}
-	@RequestMapping("productDelete")
+	@RequestMapping("/productDelete")
 	public String productDelete(String p_num, Model model) {
 		int result = ps.delete(p_num);
 		model.addAttribute("result", result);
 		return "/product/productDelete";
 	}
-	@RequestMapping("productUpdate")
+	@RequestMapping("/productUpdate")
 	public String productUpdate(Product product, Model model) {
 		int result = ps.update(product);
 		model.addAttribute("result", result);
