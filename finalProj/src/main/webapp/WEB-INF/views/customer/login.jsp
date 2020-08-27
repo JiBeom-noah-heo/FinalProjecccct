@@ -9,6 +9,12 @@
 		location.href="home";
 	</script>
 </c:if>
+<c:if test="${result == 0 }">
+	<script type="text/javascript">
+		alert("관리자");
+		location.href="home"
+	</script>
+</c:if>
 <c:if test="${result == -1 }">
 	<script type="text/javascript">
 		alert("꺼졍");

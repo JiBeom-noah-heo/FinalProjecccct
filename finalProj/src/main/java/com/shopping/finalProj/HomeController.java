@@ -6,12 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.shopping.manSH.Basket;
 import com.shopping.manSH.BasketService;
-import com.shopping.KM.CustomerService;
 @Controller
 public class HomeController {
 	@Autowired
 	private BasketService bs;
-	private CustomerService cs;
 	@RequestMapping("/home")
 	public String home() {
 		return "home";

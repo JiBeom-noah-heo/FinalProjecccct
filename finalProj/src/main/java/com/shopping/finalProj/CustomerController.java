@@ -1,4 +1,6 @@
 package com.shopping.finalProj;
+import java.util.Collection;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,10 +53,11 @@ public class CustomerController {
 		if(ct==null || ct.getC_del().equals("y")) {
 			result=-1;
 		}else if(ct.getC_password().equals(ct.getC_password())) {
-			if(ct.getC_id().equals("admin")) {
-				
+			if(ct.getC_id().equals("master")) {
+				result=0;
+			}else {
+				result =1;
 			}
-			result =1;
 			session.setAttribute("id",ct.getC_id());
 		}
 		model.addAttribute("result",result);
@@ -64,5 +67,11 @@ public class CustomerController {
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "/customer/logout";
+	}
+	@RequestMapping("/customerList")
+	public String customerList(Model model) {
+		Collection<Customer> list=cs.list();
+		model.addAttribute("list",list);
+		return "customerList";
 	}
 }
