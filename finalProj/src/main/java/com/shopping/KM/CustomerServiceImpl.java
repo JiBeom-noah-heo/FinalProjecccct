@@ -1,5 +1,7 @@
 package com.shopping.KM;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,5 +14,8 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 	public int insert(Customer customer) {
 		return cd.insert(customer);
+	}
+	public Collection<Customer> list() {
+		return cd.list();
 	}
 }
