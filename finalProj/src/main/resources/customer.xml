@@ -22,4 +22,7 @@
 		insert into customer values (#{c_id},#{c_password},#{c_name},
 		#{c_gender},#{c_address},#{c_zip},'family',#{c_email},#{c_tel},sysdate,'n')
 </insert>
+<select id="selectList" resultMap="customerResult">
+	select * from customer
+</select>
 </mapper>

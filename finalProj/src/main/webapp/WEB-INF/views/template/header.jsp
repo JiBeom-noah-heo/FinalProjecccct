@@ -50,7 +50,10 @@
                             <a href="joinForm">Register</a>
                             </c:if>
                         	<c:if test="${not empty ss}">
-                            <a href="logout">Logout</a>
+	                            <c:if test="${ss=='master'}">
+		                            <a href="customerList">회원 관리</a>
+	                            </c:if>
+                            	<a href="logout">Logout</a>
                             </c:if>
                         </div>
                         <ul class="header__right__widget">

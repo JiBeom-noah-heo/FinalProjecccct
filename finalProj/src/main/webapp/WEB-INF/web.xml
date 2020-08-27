@@ -38,14 +38,4 @@
     <servlet-name>appServlet</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>asdf</display-name>
-    <servlet-name>asdf</servlet-name>
-    <servlet-class>com.shopping.man1K.asdf</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>asdf</servlet-name>
-    <url-pattern>/asdf</url-pattern>
-  </servlet-mapping>
 </web-app>
