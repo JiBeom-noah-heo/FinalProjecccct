@@ -36,4 +36,9 @@
 		<put-attribute name="body"
 			value="/WEB-INF/views/basket/basketList.jsp" />
 	</definition>
+	<definition name="orderList" extends="tilesbase">
+		<put-attribute name="title" value="주문내역" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product_order/orderList.jsp" />
+	</definition>
 </tiles-definitions>

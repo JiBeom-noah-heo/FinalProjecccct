@@ -51,6 +51,7 @@
                             </c:if>
                         	<c:if test="${not empty ss}">
                             <a href="logout">Logout</a>
+                            <a href="orderList">주문내역</a>
                             </c:if>
                         </div>
                         <ul class="header__right__widget">
