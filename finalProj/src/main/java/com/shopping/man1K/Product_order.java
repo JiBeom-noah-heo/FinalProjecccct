@@ -5,7 +5,7 @@ import java.sql.Date;
 import lombok.Data;
 
 @Data
-public class PRODUCT_order{
+public class Product_order{
 		private int Po_num;
 		private int Po_ba_num;
 		private String Po_ba_c_id;
