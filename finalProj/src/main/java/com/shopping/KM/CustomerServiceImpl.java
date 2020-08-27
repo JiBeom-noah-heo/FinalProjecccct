@@ -18,4 +18,7 @@ public class CustomerServiceImpl implements CustomerService {
 	public Collection<Customer> list() {
 		return cd.list();
 	}
+	public int update(Customer customer) {
+		return cd.update(customer);
+	}
 }
