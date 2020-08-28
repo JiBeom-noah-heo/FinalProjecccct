@@ -23,7 +23,10 @@
 	<result property="Po_purdate" column="Po_purdate"/>
 	<result property="Po_comdate" column="Po_comdate"/>
 </resultMap>
-<select id="select" parameterType="string" resultType="product_order">
+<select id="selectList" resultType="product_order">
+	select * from product_order
+</select>
+<!-- <select id="select" parameterType="string" resultType="product_order">
 	select * from product_order where Po_num
 </select>
 <insert id="insert" parameterType="product_order">
@@ -38,7 +41,7 @@
 </update>
 <delete id="delete" parameterType="int">
 	delete from product_order where Po_num=#{Po_num}
-</delete>
+</delete> -->
 </mapper>
 
 
