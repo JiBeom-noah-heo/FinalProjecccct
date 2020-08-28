@@ -9,12 +9,12 @@ create table member4 (
 );
 drop table member4;
 
-
+ALTER TABLE customer MODIFY(c_gender varchar(6));
 
 create table customer(
    c_id varchar2(20) primary key,
    c_password varchar2(20),
-   c_name varchar(2),
+   c_name varchar(20),
    c_gender char(1),
    c_address varchar2(20),
    c_zip varchar2(20),
