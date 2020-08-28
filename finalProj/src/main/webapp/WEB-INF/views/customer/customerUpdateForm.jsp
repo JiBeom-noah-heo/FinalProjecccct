@@ -41,8 +41,13 @@
 		<tr>
 			<th>회원등급</th>
 			<td>
-				<input type="text" name="c_grade" value="${customer.c_grade}"
-				required="required">
+				<select name="c_grade">
+				    <option value="${customer.c_grade}" selected="selected">${customer.c_grade}</option>
+				    <option value="family">family</option>
+				    <option value="gold">gold</option>
+				    <option value="vip">vip</option>
+				    <option value="vvip">vvip</option>
+				</select>
 			</td>
 		</tr>
 		<tr>

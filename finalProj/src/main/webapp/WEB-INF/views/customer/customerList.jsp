@@ -24,7 +24,7 @@
 	<tr>
 <c:forEach var="customer" items="${list}">
 	<tr>
-		<td><a href="customerDetail?c_id=${customer.c_id}" >${customer.c_id}</a></td>
+		<td>${customer.c_id}</td>
 		<td>${customer.c_name}</td>
 		<td>${customer.c_gender}</td>
 		<td>${customer.c_address}</td>
