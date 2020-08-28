@@ -3,28 +3,28 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="product_orderns">
 <resultMap type="product_order" id="product_orderResult">
-	<result property="Po_num" column="Po_num"/>
-	<result property="Po_ba_num" column="Po_ba_num"/>
-	<result property="Po_ba_c_id" column="Po_ba_c_id"/>
-	<result property="Po_ba_p_num" column="Po_ba_p_num"/>
-	<result property="Po_quantity" column="Po_quantity"/>
-	<result property="Po_size" column="Po_size"/>
-	<result property="Po_color" column="Po_color"/>
-	<result property="Po_receiver" column="Po_receiver"/>
-	<result property="Po_address" column="Po_address"/>
-	<result property="Po_zip" column="Po_zip"/>
-	<result property="Po_tel" column="Po_tel"/>
-	<result property="Po_memo" column="Po_memo"/>
-	<result property="Po_totprice" column="Po_totprice"/>
-	<result property="Po_delivno" column="Po_delivno"/>
-	<result property="Po_delivtype" column="Po_delivtype"/>
-	<result property="Po_delivplayer" column="Po_delivplayer"/>
-	<result property="Po_delivstatus" column="Po_delivstatus"/>
-	<result property="Po_purdate" column="Po_purdate"/>
-	<result property="Po_comdate" column="Po_comdate"/>
+	<result property="po_num" column="po_num"/>
+	<result property="po_ba_num" column="po_ba_num"/>
+	<result property="po_ba_c_id" column="po_ba_c_id"/>
+	<result property="po_ba_p_num" column="po_ba_p_num"/>
+	<result property="po_quantity" column="po_quantity"/>
+	<result property="po_size" column="po_size"/>
+	<result property="po_color" column="po_color"/>
+	<result property="po_receiver" column="po_receiver"/>
+	<result property="po_address" column="po_address"/>
+	<result property="po_zip" column="po_zip"/>
+	<result property="po_tel" column="po_tel"/>
+	<result property="po_memo" column="po_memo"/>
+	<result property="po_totprice" column="po_totprice"/>
+	<result property="po_delivno" column="po_delivno"/>
+	<result property="po_delivtype" column="po_delivtype"/>
+	<result property="po_delivplayer" column="po_delivplayer"/>
+	<result property="po_delivstatus" column="po_delivstatus"/>
+	<result property="po_purdate" column="po_purdate"/>
+	<result property="po_comdate" column="po_comdate"/>
 </resultMap>
-<select id="selectList" resultType="product_order">
-	select * from product_order
+<select id="selectList" resultMap="product_order">
+	select * from product_order by po_num
 </select>
 <!-- <select id="select" parameterType="string" resultType="product_order">
 	select * from product_order where Po_num
