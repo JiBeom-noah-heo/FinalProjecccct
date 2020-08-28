@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.shopping.manSH.Basket;
 import com.shopping.manSH.BasketService;
 @Controller
-public class HomeController {
+public class BasketController {
 	@Autowired
 	private BasketService bs;
 	@RequestMapping("/home")
