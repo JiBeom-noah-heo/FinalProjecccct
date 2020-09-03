@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="reviews">
+<resultMap type="review" id="reviewResult">
+	<result property="pb_num" column="pb_num"/>
+	<result property="pb_p_num" column="pb_p_num"/>
+	<result property="pb_title" column="pb_title"/>
+	<result property="pb_content" column="pb_content"/>
+	<result property="pb_image" column="pb_image"/>
+	<result property="pb_readcount" column="pb_readcount"/>
+	<result property="pb_like" column="pb_like"/>
+	<result property="pb_ref" column="pb_ref"/>
+	<result property="pb_restep" column="pb_restep"/>
+	<result property="pb_relevel" column="pb_relevel"/>
+	<result property="pb_ip" column="pb_ip"/>
+	<result property="pb_regdate" column="pb_regdate"/>
+	<result property="pb_del" column="pb_del"/>
+</resultMap>
+<select id="select" parameterType="string" resultType="reviewList">
+	select * from customer where pb_p_num=#{pb_p_num}
+</select>
+<insert id="insert" parameterType="customer">
+		insert into customer values (#{c_id},#{c_password},#{c_name},
+		#{c_gender},#{c_address},#{c_zip},'family',#{c_email},#{c_tel},sysdate,'n')
+</insert>
+<select id="selectList" resultMap="customerResult">
+	select * from customer
+</select>
+<update id="update" parameterType="customer">
+	update customer set c_name=#{c_name},c_address=#{c_address},c_zip=#{c_zip},c_grade=#{c_grade},c_email=#{c_email},c_tel=#{c_tel} where c_id=#{c_id}
+</update>
+</mapper>
