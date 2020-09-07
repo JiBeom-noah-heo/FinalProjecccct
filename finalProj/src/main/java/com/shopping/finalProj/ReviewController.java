@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.shopping.manJB.Review;
-import com.shopping.manJB.ReviewService;
+import com.shopping.JB.Review;
+import com.shopping.JB.ReviewService;
 
 @Controller
 public class ReviewController {
