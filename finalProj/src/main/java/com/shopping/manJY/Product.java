@@ -16,5 +16,4 @@ public class Product {
 	 private int p_quantity;
 	 private int p_like;
 	 private Date p_regdate; 
-	 private MultipartFile p_file;
 }

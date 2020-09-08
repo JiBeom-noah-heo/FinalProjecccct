@@ -52,6 +52,7 @@
                         	<c:if test="${not empty ss}">
 	                            <c:if test="${ss=='master'}">
 		                            <a href="customerList">회원 관리</a>
+		                           	<a href="productInsertForm">상품등록</a>
                             		<a href="logout">Logout</a>
 	                            </c:if>
                             	<c:if test="${ss!='master'}">

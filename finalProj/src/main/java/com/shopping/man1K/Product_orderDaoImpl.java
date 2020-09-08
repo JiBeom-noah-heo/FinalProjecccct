@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import lombok.Data;
-@Data
 @Repository
 public class Product_orderDaoImpl implements Product_orderDao{
 	@Autowired

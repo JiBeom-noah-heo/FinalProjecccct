@@ -17,7 +17,11 @@ import com.shopping.manJY.ProductService;
 public class ProductController {
 	@Autowired
 	private ProductService ps;
-	@RequestMapping("/insert")
+	@RequestMapping("/productInsertForm")
+	public String productInsertFomr() {
+		return "productInsertForm";
+	}
+	@RequestMapping("/productInsert")
 	public String upload(@RequestParam("file") MultipartFile mf,
 			Customer customer,Model model,HttpSession session) throws IllegalStateException, IOException {
 		String fileName = mf.getOriginalFilename();				
@@ -30,7 +34,7 @@ public class ProductController {
 		int fileSize = (int)mf.getSize();
 		model.addAttribute("fileName", fileName);
 		model.addAttribute("fileize", fileSize);
-		return "insert";
+		return "/product/productInsert";
 	}
 	@RequestMapping("/productList")
 	public String productList(Model model) {

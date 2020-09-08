@@ -26,6 +26,6 @@
 	select * from customer
 </select>
 <update id="update" parameterType="customer">
-	update customer set c_name=#{c_name},c_address=#{c_address},c_zip=#{c_zip},c_grade=#{c_grade},c_email=#{c_email},c_tel=#{c_tel} where c_id=#{c_id}
+	update customer set c_name=#{c_name},c_address=#{c_address},c_zip=#{c_zip},c_grade=#{c_grade},c_email=#{c_email},c_tel=#{c_tel},c_regdate=#{c_regdate} where c_id=#{c_id}
 </update>
 </mapper>
