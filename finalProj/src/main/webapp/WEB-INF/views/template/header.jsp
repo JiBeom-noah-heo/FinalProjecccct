@@ -52,7 +52,11 @@
                         	<c:if test="${not empty ss}">
 	                            <c:if test="${ss=='master'}">
 		                            <a href="customerList">회원 관리</a>
+<<<<<<< HEAD
 		                            <a href="productInsert">상품등록</a>
+=======
+		                           	<a href="productInsertForm">상품등록</a>
+>>>>>>> refs/heads/km
                             		<a href="logout">Logout</a>
 	                            </c:if>
                             	<c:if test="${ss!='master'}">
