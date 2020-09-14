@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class Product {
 	 private String p_num;
-	 private String p_pc_num;
+	 private String p_pc_name;
 	 private String p_image;
 	 private int p_price;
 	 private String p_name;
@@ -17,5 +17,4 @@ public class Product {
 	 private int p_quantity;
 	 private int p_like;
 	 private Date p_regdate; 
-	 private MultipartFile p_file;
 }
