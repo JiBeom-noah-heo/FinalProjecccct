@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +9,12 @@
 <body>
 <form action="productInsert">
 	<table>
+		<tr>
+			<th>회사</th>
+				<td>
+					<input type="text" name="p_pc_name" required="required">
+				</td>
+		</tr>
 		<tr>
 			<th>사진</th>
 				<td>
