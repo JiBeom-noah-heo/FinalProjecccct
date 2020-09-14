@@ -8,7 +8,7 @@
 </head>
 <body>
 <script type="text/javascript">
-//	location.href="basketList";
+//	location.hr"src/main/webapp/index.jsp"ef="basketList";
 	location.href="home";
 </script>
 </body>

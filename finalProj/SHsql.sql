@@ -17,11 +17,12 @@ create table product_company(
    pc_address varchar2(20),
    pc_tel varchar2(20)
 );
+drop table product_company;
 drop table product cascade constraints;
 create table product(
    p_num number(10) primary key,
-   p_pc_name varchar2(20) references product_company(pc_name),
-   p_image varchar(50),
+   p_pc_name varchar2(20),
+   p_image clob,
    p_name varchar2(20),
    p_category varchar2(20),
    p_brand varchar2(20),
@@ -32,6 +33,7 @@ create table product(
    p_like number(10),
    p_regdate date default sysdate
 );
+select * from product;
 create TABLE product_board(
    pb_num number(10) primary key,
    pb_p_num number(10) references product(p_num),
