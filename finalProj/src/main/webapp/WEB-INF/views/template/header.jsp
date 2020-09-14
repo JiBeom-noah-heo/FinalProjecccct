@@ -59,10 +59,16 @@
 >>>>>>> refs/heads/km
                             		<a href="logout">Logout</a>
 	                            </c:if>
+<<<<<<< HEAD
+                            	<a href="logout">Logout</a>
+                            <a href="logout">Logout</a>
+                            <a href="orderList">주문내역</a>
+=======
                             	<c:if test="${ss!='master'}">
                                   	<a href="logout">Logout</a>
                             		<a href="orderList">주문내역</a>
  	                        	</c:if>
+>>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
                             </c:if>
                         </div>
                         <ul class="header__right__widget">

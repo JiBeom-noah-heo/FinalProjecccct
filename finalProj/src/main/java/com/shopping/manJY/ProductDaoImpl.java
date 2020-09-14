@@ -19,4 +19,7 @@ public class ProductDaoImpl implements ProductDao{
 	public int update(Product product) {
 		return sst.update("productns.update", product);
 	}
+	public int insert(Product product) {
+		return sst.insert("productns.insert",product);
+	}
 }
