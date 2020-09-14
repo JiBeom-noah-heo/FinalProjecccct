@@ -50,15 +50,12 @@
                             <a href="joinForm">Register</a>
                             </c:if>
                         	<c:if test="${not empty ss}">
-<<<<<<< HEAD
 	                            <c:if test="${ss=='master'}">
 		                            <a href="customerList">회원 관리</a>
 	                            </c:if>
                             	<a href="logout">Logout</a>
-=======
                             <a href="logout">Logout</a>
                             <a href="orderList">주문내역</a>
->>>>>>> refs/remotes/origin/1k
                             </c:if>
                         </div>
                         <ul class="header__right__widget">

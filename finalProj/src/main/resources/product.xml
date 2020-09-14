@@ -6,6 +6,7 @@
 	<result property="p_num" column="p_num"/>
 	<result property="p_pc_name" column="p_pc_name"/>
 	<result property="p_image" column="p_image"/>
+	<result property="p_price" column="p_price"/>
 	<result property="p_name" column="p_name"/>
 	<result property="p_category" column="p_category"/>
 	<result property="p_brand" column="p_brand"/>
@@ -20,7 +21,7 @@
 	select * from product where p_num
 </select>
 <insert id="insert" parameterType="product">
-		insert into customer values (#{p_num},#{p_pc_name},#{p_image},
+		insert into customer values (#{p_num},#{p_pc_name},#{p_image},#{p_price},
 		#{p_image},#{p_name},#{p_category},#{p_brand},#{p_size},#{p_discount},
 		#{p_discountrate},#{p_quantity},0,sysdate)
 </insert>
@@ -28,7 +29,7 @@
 	select * from product
 </select>
 <update id="update" parameterType="product">
-	update product set p_pc_name=#{p_pc_name},p_image=#{p_image},p_name=#{p_name},p_category=#{p_category},
+	update product set p_pc_name=#{p_pc_name},p_image=#{p_image},p_price=#{p_price},p_name=#{p_name},p_category=#{p_category},
 	p_brand=#{p_brand},p_size=#{p_size},p_discount=#{p_discount},p_discountrate=#{p_discountrate},
 	p_quantity=#{p_quantity} where p_num=#{p_num}
 </update>

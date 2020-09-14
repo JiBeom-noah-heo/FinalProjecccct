@@ -7,6 +7,7 @@ public class Product {
 	 private String p_num;
 	 private String p_pc_num;
 	 private String p_image;
+	 private int p_price;
 	 private String p_name;
 	 private String p_category;
 	 private String p_brand;

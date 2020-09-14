@@ -20,8 +20,9 @@ create table product_company(
 drop table product cascade constraints;
 create table product(
    p_num number(10) primary key,
-   p_pc_name varchar2(20) references product_company(pc_name),
-   p_image varchar(50),
+   p_pc_name varchar2(20),
+   p_image clob,
+   p_price number(15),
    p_name varchar2(20),
    p_category varchar2(20),
    p_brand varchar2(20),
