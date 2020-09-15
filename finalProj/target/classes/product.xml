@@ -20,14 +20,7 @@
 <select id="select" parameterType="string" resultType="product">
 	select * from product where p_name=#{p_name}
 </select>
-<<<<<<< HEAD
-<insert id="insert" parameterType="product" >
-=======
 <insert id="insert" parameterType="product">
-		insert into customer values (#{p_num},#{p_pc_name},#{p_image},#{p_price},
-		#{p_image},#{p_name},#{p_category},#{p_brand},#{p_size},#{p_discount},
-		#{p_discountrate},#{p_quantity},0,sysdate)
->>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
 		insert into product values ((select count(*)  from product)+1,#{p_pc_name},#{p_image},#{p_name},#{p_category},#{p_brand},#{p_size},#{p_discount},#{p_discountrate},#{p_quantity},0,sysdate)
 </insert>
 <select id="selectList" resultMap="productResult">
