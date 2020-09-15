@@ -1,5 +1,6 @@
 package com.shopping.manJb;
 
+
 public class Board {
 
 	private String id;
