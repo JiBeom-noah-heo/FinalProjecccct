@@ -1,8 +1,8 @@
 create table customer(
    c_id varchar2(20) primary key,
    c_password varchar2(20),
-   c_name varchar(2),
-   c_gender char(1),
+   c_name varchar2(20),
+   c_gender varchar2(20),
    c_address varchar2(20),
    c_zip varchar2(20),
    c_grade varchar2(20) default 'family',
@@ -11,7 +11,9 @@ create table customer(
    c_regdate date default sysdate,
    c_del char(1) default 'n'
 );
-
+alter table customer modify(c_address varchar2(50));
+drop table product_order;
+select * from product_order;
 create table product_company(
    pc_name varchar2(20) primary key,
    pc_address varchar2(20),
@@ -23,6 +25,10 @@ create table product(
    p_num number(10) primary key,
    p_pc_name varchar2(20),
    p_image clob,
+<<<<<<< HEAD
+   p_price number(15),
+=======
+>>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
    p_name varchar2(20),
    p_category varchar2(20),
    p_brand varchar2(20),
@@ -86,3 +92,4 @@ create table PRODUCT_order(
    Po_purdate date default sysdate,
    Po_comdate date
 );
+drop table customer cascade constraints;

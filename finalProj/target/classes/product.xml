@@ -6,6 +6,7 @@
 	<result property="p_num" column="p_num"/>
 	<result property="p_pc_name" column="p_pc_name"/>
 	<result property="p_image" column="p_image"/>
+	<result property="p_price" column="p_price"/>
 	<result property="p_name" column="p_name"/>
 	<result property="p_category" column="p_category"/>
 	<result property="p_brand" column="p_brand"/>
@@ -19,14 +20,21 @@
 <select id="select" parameterType="string" resultType="product">
 	select * from product where p_name=#{p_name}
 </select>
+<<<<<<< HEAD
 <insert id="insert" parameterType="product" >
+=======
+<insert id="insert" parameterType="product">
+		insert into customer values (#{p_num},#{p_pc_name},#{p_image},#{p_price},
+		#{p_image},#{p_name},#{p_category},#{p_brand},#{p_size},#{p_discount},
+		#{p_discountrate},#{p_quantity},0,sysdate)
+>>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
 		insert into product values ((select count(*)  from product)+1,#{p_pc_name},#{p_image},#{p_name},#{p_category},#{p_brand},#{p_size},#{p_discount},#{p_discountrate},#{p_quantity},0,sysdate)
 </insert>
 <select id="selectList" resultMap="productResult">
 	select * from product
 </select>
 <update id="update" parameterType="product">
-	update product set p_pc_name=#{p_pc_name},p_image=#{p_image},p_name=#{p_name},p_category=#{p_category},
+	update product set p_pc_name=#{p_pc_name},p_image=#{p_image},p_price=#{p_price},p_name=#{p_name},p_category=#{p_category},
 	p_brand=#{p_brand},p_size=#{p_size},p_discount=#{p_discount},p_discountrate=#{p_discountrate},
 	p_quantity=#{p_quantity} where p_num=#{p_num}
 </update>
