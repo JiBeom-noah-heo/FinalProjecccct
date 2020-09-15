@@ -1,19 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html><html><head><meta charset="UTF-8">
-<title>Insert title here</title>
+<!DOCTYPE html><html><head>
 	<c:set var="ss" value="${sessionScope.id}"></c:set>
-	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
+<!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li><span class="icon_search search-switch"></span></li>
+            <li><a href="#"><span class="icon_heart_alt"></span>
+                <div class="tip">2</div>
+            </a></li>
+            <li><a href="#"><span class="icon_bag_alt"></span>
+                <div class="tip">2</div>
+            </a></li>
+        </ul>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+    
+    <!-- Header Section Begin -->
     <header class="header">
         <div class="container-fluid">
             <div class="row">
@@ -50,15 +71,15 @@
                             <a href="joinForm">Register</a>
                             </c:if>
                         	<c:if test="${not empty ss}">
-<<<<<<< HEAD
 	                            <c:if test="${ss=='master'}">
 		                            <a href="customerList">회원 관리</a>
+		                            <a href="productInsert">상품등록</a>
+                            		<a href="logout">Logout</a>
 	                            </c:if>
-                            	<a href="logout">Logout</a>
-=======
-                            <a href="logout">Logout</a>
-                            <a href="orderList">주문내역</a>
->>>>>>> refs/remotes/origin/1k
+                            	<c:if test="${ss!='master'}">
+                                  	<a href="logout">Logout</a>
+                            		<a href="orderList">주문내역</a>
+ 	                        	</c:if>
                             </c:if>
                         </div>
                         <ul class="header__right__widget">

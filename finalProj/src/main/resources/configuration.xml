@@ -6,9 +6,11 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<typeAliases>
 		<typeAlias alias="customer" type="com.shopping.KM.Customer"/>
 		<typeAlias alias="basket" type="com.shopping.manSH.Basket"/>
+		<!-- <typeAlias alias="product_order" type="com.shopping.man1K.Product_order"/> -->
 	</typeAliases>
 	<mappers>
 		<mapper	resource="customer.xml" />
 		<mapper	resource="basket.xml" />
+		<!-- <mapper	resource="product_order.xml" /> -->
 	</mappers>
 </configuration>

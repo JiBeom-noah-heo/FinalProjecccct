@@ -1,9 +1,6 @@
 package com.shopping.man1K;
-
 import java.sql.Date;
-
 import lombok.Data;
-
 @Data
 public class Product_order{
 		private int Po_num;
