@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.multipart.MultipartFile;
 
 @Repository
 public class ProductDaoImpl implements ProductDao{

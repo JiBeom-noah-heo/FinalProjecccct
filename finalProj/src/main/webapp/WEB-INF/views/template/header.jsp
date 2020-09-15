@@ -28,7 +28,7 @@
                             <li class="active"><a href="home">Home</a></li>
                             <li><a href="#">Women’s</a></li>
                             <li><a href="#">Men’s</a></li>
-                            <li><a href="shop">Shop</a></li>
+                            <li><a href="productList">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="./product-details.html">Product Details</a></li>
