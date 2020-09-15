@@ -8,15 +8,6 @@
 </head>
 <body>
 	
-		<div id="header">
-			<%@ include file="include/header.jsp" %>
-		</div>
-		<div id="container">
-			<%@ include file="include/container.jsp" %>
-		</div>
-		<div id="footer">
-			<%@ include file="include/footer.jsp" %>
-		</div>
 	
 </body>
 </html>
