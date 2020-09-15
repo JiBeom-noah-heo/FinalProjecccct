@@ -6,23 +6,16 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<typeAliases>
 		<typeAlias alias="customer" type="com.shopping.KM.Customer"/>
 		<typeAlias alias="basket" type="com.shopping.manSH.Basket"/>
-<<<<<<< HEAD
 		<typeAlias alias="product" type="com.shopping.manJY.Product"/>
-=======
 		<typeAlias alias="product_order" type="com.shopping.man1K.Product_order"/>
->>>>>>> refs/remotes/origin/1k
+		<!-- <typeAlias alias="product_order" type="com.shopping.man1K.Product_order"/> -->
 	</typeAliases>
 	<mappers>
 		<mapper	resource="customer.xml" />
 		<mapper	resource="basket.xml" />
-<<<<<<< HEAD
-<<<<<<< HEAD
 		<mapper	resource="product.xml" />
-=======
 		<mapper resource="product.xml"/>
->>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
-=======
 		<mapper	resource="product_order.xml" />
->>>>>>> refs/remotes/origin/1k
+		<!-- <mapper	resource="product_order.xml" /> -->
 	</mappers>
 </configuration>
