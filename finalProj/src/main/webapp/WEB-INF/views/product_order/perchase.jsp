@@ -8,14 +8,15 @@
 </head>
 <body>
 	<table>
-		<tr>
-			<th>배송지</th>
-		</tr>
-		<tr>
-			<th>할인</th>
-		</tr>
-		<tr>
-			
+		<div id="header">
+			<%@ include file="include/header.jsp" %>
+		</div>
+		<div id="container">
+			<%@ include file="include/container.jsp" %>
+		</div>
+		<div id="footer">
+			<%@ include file="include/footer.jsp" %>
+		</div>
 	</table>
 </body>
 </html>
