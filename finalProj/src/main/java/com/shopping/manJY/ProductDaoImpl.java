@@ -23,4 +23,7 @@ public class ProductDaoImpl implements ProductDao{
 	public int insert(Product product) {
 		return sst.insert("productns.insert",product);
 	}
+	public Product select(String name) {
+		return sst.selectOne("productns.select",name);
+	}
 }

@@ -61,4 +61,9 @@
 		<put-attribute name="body"
 			value="/WEB-INF/views/product/productList.jsp" />
 	</definition>
+	<definition name="productDetail" extends="tilesbase">
+		<put-attribute name="title" value="상품상세" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/productDetail.jsp" />
+	</definition>
 </tiles-definitions>

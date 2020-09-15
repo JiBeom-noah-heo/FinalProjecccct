@@ -14,7 +14,7 @@
 		<td><img alt="대박" src="resources/upload/${product.p_image}" height="150px" width="150px"></td>
 	</tr>
 	<tr>
-		<td><a href="productDetail?name="${product.p_name}">${product.p_name}</a></td>
+		<td><a href="productDetail?name=${product.p_name}">${product.p_name}</a></td>
 	</tr>
 </table>
 <br>

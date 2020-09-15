@@ -56,4 +56,10 @@ public class ProductController {
 		model.addAttribute("result", result);
 		return "/product/productUpdate";
 	}
+	@RequestMapping("/productDetail")
+	public String productDetail(String name,Model model,HttpSession session) {
+		Product product = ps.select(name);
+		model.addAttribute("product",product);
+		return "productDetail";
+	}
 }

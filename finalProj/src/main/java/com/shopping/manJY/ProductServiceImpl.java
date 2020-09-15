@@ -19,4 +19,7 @@ public class ProductServiceImpl implements ProductService{
 	public int insert(Product product) {
 		return pd.insert(product);
 	}
+	public Product select(String name) {
+		return pd.select(name);
+	}
 }

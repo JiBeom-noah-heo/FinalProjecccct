@@ -9,4 +9,5 @@ public interface ProductDao {
 	int delete(String p_num);
 	int update(Product product);
 	int insert(Product product);
+	Product select(String name);
 }
