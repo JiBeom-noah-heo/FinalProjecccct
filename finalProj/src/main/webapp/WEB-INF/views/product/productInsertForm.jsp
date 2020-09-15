@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="productInsert">
+<form action="productInsert" method="post"
+	enctype="multipart/form-data">
 	<table>
 		<tr>
 			<th>회사</th>
@@ -18,7 +19,7 @@
 		<tr>
 			<th>사진</th>
 				<td>
-					<input type="file" name="p_image" required="required">
+					<input type="file" name="file" required="required">
 				</td>
 		</tr>
 		<tr>
