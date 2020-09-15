@@ -15,4 +15,7 @@ public class ProductServiceImpl implements ProductService{
 	public int update(Product product) {
 		return pd.update(product);
 	}
+	public int insert(Product product) {
+		return pd.insert(product);
+	}
 }

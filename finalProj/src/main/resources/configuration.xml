@@ -6,9 +6,15 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<typeAliases>
 		<typeAlias alias="customer" type="com.shopping.KM.Customer"/>
 		<typeAlias alias="basket" type="com.shopping.manSH.Basket"/>
+		<typeAlias alias="product" type="com.shopping.manJY.Product"/>
 	</typeAliases>
 	<mappers>
 		<mapper	resource="customer.xml" />
 		<mapper	resource="basket.xml" />
+<<<<<<< HEAD
+		<mapper	resource="product.xml" />
+=======
+		<mapper resource="product.xml"/>
+>>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
 	</mappers>
 </configuration>
