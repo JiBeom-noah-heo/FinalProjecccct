@@ -20,6 +20,7 @@
 	<resources mapping="/css/**" location="/WEB-INF/css/" />
 	<resources mapping="/js/**" location="/WEB-INF/js/" />
 	<resources mapping="/fonts/**" location="/WEB-INF/fonts/" />
+<<<<<<< HEAD
 	<resources mapping="/img/**" location="/WEB-INF/img/" />
 	
 	
@@ -27,6 +28,12 @@
 		in the /WEB-INF/views directory -->
 	<beans:bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+=======
+	<!-- <resources mapping="/img/**" location="/WEB-INF/img/" /> -->
+<!-- 	<resources mapping="/upload/**" location="/WEB-INF/upload/" /> -->
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+>>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
 		<beans:property name="order" value="2"></beans:property>
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
@@ -48,5 +55,9 @@
 				<beans:value>/WEB-INF/tiles/tiles.xml</beans:value>
 			</beans:list>
 		</beans:property>
+	</beans:bean>
+	<beans:bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+         <beans:property name="maxUploadSize" value="52428800" />
+         <beans:property name="defaultEncoding" value="utf-8" />
 	</beans:bean>
 </beans:beans>
