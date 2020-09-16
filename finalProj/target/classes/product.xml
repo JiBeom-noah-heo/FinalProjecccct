@@ -21,13 +21,12 @@
 	select * from product where p_num
 </select>
 <insert id="insert" parameterType="product">
-<<<<<<< HEAD
+
 		insert into customer values (#{p_num},#{p_pc_name},#{p_image},#{p_price},
 		#{p_image},#{p_name},#{p_category},#{p_brand},#{p_size},#{p_discount},
 		#{p_discountrate},#{p_quantity},0,sysdate)
-=======
 		insert into product values ((select count(*)  from product)+1,#{p_pc_name},#{p_image},#{p_name},#{p_category},#{p_brand},#{p_size},#{p_discount},#{p_discountrate},#{p_quantity},0,sysdate)
->>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
+
 </insert>
 <select id="productList" resultMap="productResult">
 	select * from product

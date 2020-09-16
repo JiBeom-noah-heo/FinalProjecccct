@@ -1,4 +1,4 @@
-package com.shopping.manJb;
+package com.shopping.finalProj;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -20,10 +20,10 @@ import com.shopping.manJb.ReviewService;
 @Controller
 public class ReviewController {
 	@Autowired
-	ReviewService ReviewService;
+	private ReviewService rs;
 
 	// 게시글 리스트 조회
-	@RequestMapping(value = "/board/list")
+	@RequestMapping(value = "/review/reviewList")
 	public String boardList(@RequestParam Map<String, Object> paramMap, Model model) {
 
 		// 조회 하려는 페이지
@@ -34,26 +34,19 @@ public class ReviewController {
 				? Integer.parseInt(paramMap.get("visiblePages").toString())
 				: 10);
 		// 일단 전체 건수를 가져온다.
-		int totalCnt = ReviewService.getContentCnt(paramMap);
+		int totalCnt = rs.getContentCnt(paramMap);
 
-		// 아래 1,2는 실제 개발에서는 class로 빼준다. (여기서는 이해를 위해 직접 적음)
+
 		// 1.하단 페이지 네비게이션에서 보여줄 리스트 수를 구한다.
 		BigDecimal decimal1 = new BigDecimal(totalCnt);
 		BigDecimal decimal2 = new BigDecimal(visiblePages);
 		BigDecimal totalPage = decimal1.divide(decimal2, 0, BigDecimal.ROUND_UP);
 
 		int startLimitPage = 0;
-		// 2.mysql limit 범위를 구하기 위해 계산
-		if (startPage == 1) {
-			startLimitPage = 0;
-		} else {
-			startLimitPage = (startPage - 1) * visiblePages;
-		}
+
 
 		paramMap.put("start", startLimitPage);
 
-		// MYSQL
-		// paramMap.put("end", visiblePages);
 
 		// ORACLE
 		paramMap.put("end", startLimitPage + visiblePages);
@@ -62,57 +55,57 @@ public class ReviewController {
 		model.addAttribute("startPage", startPage + "");// 현재 페이지
 		model.addAttribute("totalCnt", totalCnt);// 전체 게시물수
 		model.addAttribute("totalPage", totalPage);// 페이지 네비게이션에 보여줄 리스트 수
-		model.addAttribute("boardList", ReviewService.getContentList(paramMap));// 검색
+		model.addAttribute("boardList", rs.getContentList(paramMap));// 검색
 
-		return "boardList";
+		return "reviewList";
 
 	}
 
 	// 게시글 상세 보기
-	@RequestMapping(value = "/board/view")
+	@RequestMapping(value = "/review/reviewView")
 	public String boardView(@RequestParam Map<String, Object> paramMap, Model model) {
 
-		model.addAttribute("replyList", ReviewService.getReplyList(paramMap));
-		model.addAttribute("boardView", ReviewService.getContentView(paramMap));
+		model.addAttribute("reviewList", rs.getReplyList(paramMap));
+		model.addAttribute("reviewView", rs.getContentView(paramMap));
 
 		return "boardView";
 
 	}
 
 	// 게시글 등록 및 수정
-	@RequestMapping(value = "/board/edit")
+	@RequestMapping(value = "/review/reviewEdit")
 	public String boardEdit(HttpServletRequest request, @RequestParam Map<String, Object> paramMap, Model model) {
 
 		// Referer 검사
 		String Referer = request.getHeader("referer");
 
 		if (Referer != null) {// URL로 직접 접근 불가
-			if (paramMap.get("id") != null) { // 게시글 수정
-				if (Referer.indexOf("/board/view") > -1) {
+			if (paramMap.get("pb_num") != null) { // 게시글 수정
+				if (Referer.indexOf("/review/reviewView") > -1) {
 
 					// 정보를 가져온다.
-					model.addAttribute("boardView", ReviewService.getContentView(paramMap));
-					return "boardEdit";
+					model.addAttribute("reviewView", rs.getContentView(paramMap));
+					return "reviewEdit";
 				} else {
-					return "redirect:/board/list";
+					return "redirect:/review/reviewList";
 				}
 			} else { // 게시글 등록
-				if (Referer.indexOf("/board/list") > -1) {
-					return "boardEdit";
+				if (Referer.indexOf("/review/reviewList") > -1) {
+					return "reviewEdit";
 				} else {
-					return "redirect:/board/list";
+					return "redirect:/review/reviewList";
 				}
 			}
 		} else {
-			return "redirect:/board/list";
+			return "redirect:/review/reviewList";
 		}
 
 	}
 
 	// AJAX 호출 (게시글 등록, 수정)
-	@RequestMapping(value = "/board/save", method = RequestMethod.POST)
+	@RequestMapping(value = "/review/save", method = RequestMethod.POST)
 	@ResponseBody
-	public Object boardSave(@RequestParam Map<String, Object> paramMap) {
+	public Object reviewSave(@RequestParam Map<String, Object> paramMap) {
 
 		// 리턴값
 		Map<String, Object> retVal = new HashMap<String, Object>();
@@ -123,7 +116,7 @@ public class ReviewController {
 		paramMap.put("password", password);
 
 		// 정보입력
-		int result = ReviewService.regContent(paramMap);
+		int result = rs.regContent();
 
 		if (result > 0) {
 			retVal.put("code", "OK");
@@ -151,7 +144,7 @@ public class ReviewController {
 		paramMap.put("password", password);
 
 		// 정보입력
-		int result = ReviewService.delBoard(paramMap);
+		int result = rs.delBoard(paramMap);
 
 		if (result > 0) {
 			retVal.put("code", "OK");
@@ -178,7 +171,7 @@ public class ReviewController {
 		paramMap.put("password", password);
 
 		// 정보입력
-		int result = ReviewService.getBoardCheck(paramMap);
+		int result = rs.getBoardCheck(paramMap);
 
 		if (result > 0) {
 			retVal.put("code", "OK");
@@ -205,7 +198,7 @@ public class ReviewController {
 		paramMap.put("reply_password", password);
 
 		// 정보입력
-		int result = ReviewService.regReply(paramMap);
+		int result = rs.regReply(paramMap);
 
 		if (result > 0) {
 			retVal.put("code", "OK");
@@ -235,7 +228,7 @@ public class ReviewController {
 		paramMap.put("reply_password", password);
 
 		// 정보입력
-		int result = ReviewService.delReply(paramMap);
+		int result = rs.delReply(paramMap);
 
 		if (result > 0) {
 			retVal.put("code", "OK");
@@ -262,7 +255,7 @@ public class ReviewController {
 		paramMap.put("reply_password", password);
 
 		// 정보입력
-		boolean check = ReviewService.checkReply(paramMap);
+		boolean check = rs.checkReply(paramMap);
 
 		if (check) {
 			retVal.put("code", "OK");
@@ -292,7 +285,7 @@ public class ReviewController {
 		System.out.println(paramMap);
 
 		// 정보입력
-		boolean check = ReviewService.updateReply(paramMap);
+		boolean check = rs.updateReply(paramMap);
 
 		if (check) {
 			retVal.put("code", "OK");
