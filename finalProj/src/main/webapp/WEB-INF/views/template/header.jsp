@@ -73,23 +73,23 @@
                         	<c:if test="${not empty ss}">
 	                            <c:if test="${ss=='master'}">
 		                            <a href="customerList">회원 관리</a>
-<<<<<<< HEAD
+
 		                            <a href="productInsert">상품등록</a>
-=======
+
 		                           	<a href="productInsertForm">상품등록</a>
->>>>>>> refs/heads/km
+
                             		<a href="logout">Logout</a>
 	                            </c:if>
-<<<<<<< HEAD
+
                             	<a href="logout">Logout</a>
                             <a href="logout">Logout</a>
                             <a href="orderList">주문내역</a>
-=======
+
                             	<c:if test="${ss!='master'}">
                                   	<a href="logout">Logout</a>
                             		<a href="orderList">주문내역</a>
  	                        	</c:if>
->>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
+
                             </c:if>
                         </div>
                         <ul class="header__right__widget">
