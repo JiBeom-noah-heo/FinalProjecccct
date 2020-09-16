@@ -18,15 +18,22 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<mapper	resource="basket.xml" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
+=======
+>>>>>>> refs/heads/hj
 		<mapper	resource="product.xml" />
 		<mapper resource="product.xml"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
 =======
 		<mapper	resource="product_order.xml" />
 		<!-- <mapper	resource="product_order.xml" /> -->
 >>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
+=======
+
+>>>>>>> refs/heads/hj
 	</mappers>
 </configuration>
