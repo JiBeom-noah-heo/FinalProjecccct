@@ -11,19 +11,19 @@ import com.shopping.man1K.Product_orderService;
 
 @Controller
 public class Product_orderController {
-	@Autowired
-	private Product_orderService pos;
-	@RequestMapping("/orderList")
-	public String orderList() {
-		Collection<Product_order> list=pos.selectList();
-		return "orderList";
-	}
-	@RequestMapping("/review")
-	public String review() {
-		return "review";
-	}
-	@RequestMapping("/Perchase")
-	public String perchase() {
-		return "perchase";
-	}
+//	@Autowired
+//	private Product_orderService pos;
+//	@RequestMapping("/orderList")
+//	public String orderList() {
+//		Collection<Product_order> list=pos.selectList();
+//		return "orderList";
+//	}
+//	@RequestMapping("/review")
+//	public String review() {
+//		return "review";
+//	}
+//	@RequestMapping("/Perchase")
+//	public String perchase() {
+//		return "perchase";
+//	}
 }

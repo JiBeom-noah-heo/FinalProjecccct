@@ -47,6 +47,9 @@ create table product(
 );
 
 /*   pb_image varchar(50),*/
+create sequence board_seq start with 1 increment BY 1 maxvalue 1000000;
+create sequence reply_seq start with 1 increment BY 1 maxvalue 1000000;
+
 create TABLE product_board(
    pb_num number(10) primary key,
    pb_p_num number(10) references product(p_num),
