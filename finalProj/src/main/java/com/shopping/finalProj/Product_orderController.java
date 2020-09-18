@@ -8,6 +8,7 @@ import com.shopping.man1K.Product_order;
 import com.shopping.man1K.Product_orderService;
 @Controller
 public class Product_orderController {
+<<<<<<< HEAD
 	@Autowired
 	private Product_orderService pos;
 	@RequestMapping("/orderList")
@@ -24,4 +25,22 @@ public class Product_orderController {
 	public String perchase() {
 		return "perchase";
 	}
+=======
+//	@Autowired
+//	private Product_orderService pos;
+//	@RequestMapping("/orderList")
+//	public String orderList(Model model) {
+//		Collection<Product_order> list=pos.selectList();
+//		model.addAttribute("list", list);
+//		return "orderList";
+//	}
+//	@RequestMapping("/review")
+//	public String review() {
+//		return "review";
+//	}
+//	@RequestMapping("/Perchase")
+//	public String perchase() {
+//		return "perchase";
+//	}
+>>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
 }

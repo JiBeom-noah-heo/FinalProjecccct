@@ -1,6 +1,8 @@
 package com.shopping.manJY;
 import java.sql.Date;
+
 import org.springframework.web.multipart.MultipartFile;
+
 import lombok.Data;
 @Data
 public class Product {
@@ -17,4 +19,6 @@ public class Product {
 	 private int p_quantity;
 	 private int p_like;
 	 private Date p_regdate; 
+	 // image
+	 private MultipartFile file;
 }

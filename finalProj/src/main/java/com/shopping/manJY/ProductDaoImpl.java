@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.multipart.MultipartFile;
 
 @Repository
 public class ProductDaoImpl implements ProductDao{
@@ -21,5 +22,8 @@ public class ProductDaoImpl implements ProductDao{
 	}
 	public int insert(Product product) {
 		return sst.insert("productns.insert",product);
+	}
+	public Product select(String name) {
+		return sst.selectOne("productns.select",name);
 	}
 }

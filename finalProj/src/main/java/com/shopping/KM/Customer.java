@@ -15,6 +15,6 @@ public class Customer {
 	private String c_grade;
 	private String c_email;
 	private String c_tel;
-	private Date c_regdate;
+	private Date   c_regdate;
 	private String c_del;
 }

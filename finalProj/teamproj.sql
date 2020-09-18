@@ -45,21 +45,35 @@ create table product(
    p_like number(10),
    p_regdate date default sysdate
 );
+
+/*   pb_image varchar(50),*/
 create TABLE product_board(
    pb_num number(10) primary key,
    pb_p_num number(10) references product(p_num),
+   pb_po_num number(10) references product_order(po_num),
    pb_title varchar2(20),
    pb_content varchar2(500),
-   pb_image varchar(50),
    pb_readcount number(10),
    pb_like number(10),
-   pb_ref number(10),
-   pb_restep number(10),
-   pb_relevel number(10),
+   pb_writer varchar2(10),
    pb_ip varchar2(10),
    pb_regdate date default sysdate,
    pb_del char(1) default 'n'
 );
+
+drop table product_board cascade constraint;
+
+create table product_board_reply(
+   pbr_num number(10) primary key,
+   pbr_pb_num number(10) references product_board(pb_num),
+   pbr_depth number(10),
+   pbr_content varchar2(500),
+   pbr_writer varchar2(10),
+   pbr_ip varchar2(10),
+   pbr_regdate date default sysdate,
+   pbr_del char(1) default 'n'
+);
+
 
 drop table basket cascade constraint;
 create table basket(
@@ -76,23 +90,23 @@ create table basket(
 );
 
 create table PRODUCT_order(
-   Po_num number(10) primary key,
-   Po_ba_num number(10) references basket(ba_num),
-   Po_ba_c_id varchar2(20) references CUSTOMER(c_id),
-   Po_ba_p_num number(10) references PRODUCT(p_num),
-   Po_qauntity number(10),
-   Po_size varchar2(10),
-   Po_color varchar2(20),
-   Po_receiver varchar2(20),
-   Po_address varchar2(20),
-   Po_zip varchar2(20),
-   Po_tel varchar2(20),
-   Po_memo varchar2(50),
-   Po_totprice number(10),
-   Po_delivno varchar2(20),
-   Po_delivtype varchar2(20),
-   Po_delivplayer varchar2(20),
-   Po_delivstatus varchar2(20),
-   Po_purdate date default sysdate,
-   Po_comdate date
+   po_num number(10) primary key,
+   po_ba_num number(10) references basket(ba_num),
+   po_ba_c_id varchar2(20) references CUSTOMER(c_id),
+   po_ba_p_num number(10) references PRODUCT(p_num),
+   po_qauntity number(10),
+   po_size varchar2(10),
+   po_color varchar2(20),
+   po_receiver varchar2(20),
+   po_address varchar2(20),
+   po_zip varchar2(20),
+   po_tel varchar2(20),
+   po_memo varchar2(50),
+   po_totprice number(10),
+   po_delivno varchar2(20),
+   po_delivtype varchar2(20),
+   po_delivplayer varchar2(20),
+   po_delivstatus varchar2(20),
+   po_purdate date default sysdate,
+   po_comdate date
 );
