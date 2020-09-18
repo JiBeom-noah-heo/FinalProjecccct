@@ -12,7 +12,7 @@ public class ProductController {
 	@Autowired
 	private ProductService ps;
 	@RequestMapping("/productInsertForm")
-	public String productInsertFomr() {
+	public String productInsertForm() {
 		return "productInsertForm";
 	}
 	@RequestMapping("/productInsert")

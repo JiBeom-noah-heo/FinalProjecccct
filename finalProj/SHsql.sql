@@ -25,10 +25,7 @@ create table product(
    p_num number(10) primary key,
    p_pc_name varchar2(20),
    p_image clob,
-<<<<<<< HEAD
    p_price number(15),
-=======
->>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
    p_name varchar2(20),
    p_category varchar2(20),
    p_brand varchar2(20),
