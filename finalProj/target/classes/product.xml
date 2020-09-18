@@ -18,12 +18,16 @@
 	<result property="p_regdate" column="p_regdate"/>
 </resultMap>
 <select id="select" parameterType="string" resultType="product">
-	select * from product where p_num
+	select * from product where p_name=#{p_name}
 </select>
 <insert id="insert" parameterType="product">
+<<<<<<< HEAD
 		insert into product values ((select count(*)  from product)+1,#{p_pc_name},#{p_image},#{p_name},#{p_category},#{p_brand},#{p_size},#{p_discount},#{p_discountrate},#{p_quantity},0,sysdate)
+=======
+		insert into product values ((select count(*)  from product)+1,#{p_pc_name},#{p_image},#{p_price},#{p_name},#{p_category},#{p_brand},#{p_size},#{p_discount},#{p_discountrate},#{p_quantity},0,sysdate)
+>>>>>>> refs/heads/master
 </insert>
-<select id="productList" resultMap="productResult">
+<select id="selectList" resultMap="productResult">
 	select * from product
 </select>
 <update id="update" parameterType="product">

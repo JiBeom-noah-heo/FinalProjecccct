@@ -2,6 +2,7 @@ package com.shopping.manJY;
 import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 @Service
 public class ProductServiceImpl implements ProductService{
 	@Autowired
@@ -17,5 +18,8 @@ public class ProductServiceImpl implements ProductService{
 	}
 	public int insert(Product product) {
 		return pd.insert(product);
+	}
+	public Product select(String name) {
+		return pd.select(name);
 	}
 }

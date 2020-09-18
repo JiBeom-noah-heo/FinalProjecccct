@@ -49,7 +49,7 @@
                             <li class="active"><a href="home">Home</a></li>
                             <li><a href="#">Women’s</a></li>
                             <li><a href="#">Men’s</a></li>
-                            <li><a href="shop">Shop</a></li>
+                            <li><a href="productList">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="./product-details.html">Product Details</a></li>
@@ -73,12 +73,21 @@
                         	<c:if test="${not empty ss}">
 	                            <c:if test="${ss=='master'}">
 		                            <a href="customerList">회원 관리</a>
+<<<<<<< HEAD
 		                            <a href="productInsert">상품등록</a>
+=======
+		                           	<a href="productInsertForm">상품등록</a>
+                            		<a href="logout">Logout</a>
+>>>>>>> refs/heads/master
 	                            </c:if>
                             	<c:if test="${ss!='master'}">
                                   	<a href="logout">Logout</a>
                             		<a href="orderList">주문내역</a>
  	                        	</c:if>
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/heads/master
                             </c:if>
                         </div>
                         <ul class="header__right__widget">
