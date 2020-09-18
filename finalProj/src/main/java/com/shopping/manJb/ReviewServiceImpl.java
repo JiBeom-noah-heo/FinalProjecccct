@@ -79,7 +79,7 @@ public class ReviewServiceImpl implements ReviewService {
 	            //3.자식을 돌린다.
 	            for(Review boardReplyChild: boardReplyListChild){
 	                //3-1. 부모의 자식인 것들만 넣는다.
-	                if(boardReplyParent.getReply_id().equals(boardReplyChild.getParent_id())){
+	                if(boardReplyParent.getPbr_num().equals(boardReplyChild.getParent_id())){
 	                    newBoardReplyList.add(boardReplyChild);
 	                }
 	 

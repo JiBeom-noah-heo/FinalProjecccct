@@ -116,7 +116,7 @@ public class ReviewController {
 		paramMap.put("password", password);
 
 		// 정보입력
-		int result = rs.regContent();
+		/* int result = rs.regContent(); */
 
 		if (result > 0) {
 			retVal.put("code", "OK");
