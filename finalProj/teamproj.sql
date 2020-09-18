@@ -1,8 +1,21 @@
+create table member4 (
+	id varchar2(20) primary key,
+	email varchar2(30),
+	password varchar2(20),
+	name varchar2(20),
+	fileName varchar2(50),
+	del char(1) default 'n',
+	regdate date
+);
+drop table member4;
+
+ALTER TABLE customer MODIFY(c_gender varchar(6));
+
 create table customer(
    c_id varchar2(20) primary key,
    c_password varchar2(20),
-   c_name varchar2(20),
-   c_gender varchar2(20),
+   c_name varchar(20),
+   c_gender char(1),
    c_address varchar2(20),
    c_zip varchar2(20),
    c_grade varchar2(20) default 'family',
@@ -11,24 +24,17 @@ create table customer(
    c_regdate date default sysdate,
    c_del char(1) default 'n'
 );
-alter table customer modify(c_address varchar2(50));
-drop table product_order;
-select * from product_order;
+
 create table product_company(
    pc_name varchar2(20) primary key,
    pc_address varchar2(20),
    pc_tel varchar2(20)
 );
-drop table product_company;
-drop table product cascade constraints;
+drop table bascket cascade constraint;
 create table product(
    p_num number(10) primary key,
-   p_pc_name varchar2(20),
-   p_image clob,
-<<<<<<< HEAD
-   p_price number(15),
-=======
->>>>>>> branch 'master' of https://github.com/JiBeom-noah-heo/FinalProjecccct.git
+   p_pc_name varchar2(20) references product_company(pc_name),
+   p_image varchar(50),
    p_name varchar2(20),
    p_category varchar2(20),
    p_brand varchar2(20),
@@ -39,7 +45,6 @@ create table product(
    p_like number(10),
    p_regdate date default sysdate
 );
-select * from product;
 create TABLE product_board(
    pb_num number(10) primary key,
    pb_p_num number(10) references product(p_num),
@@ -55,12 +60,13 @@ create TABLE product_board(
    pb_regdate date default sysdate,
    pb_del char(1) default 'n'
 );
-drop table basket cascade constraints;   
+
+drop table basket cascade constraint;
 create table basket(
    ba_num number(10) primary key,
    ba_c_id varchar2(20) references customer(c_id),
    ba_p_num number(10) references product(p_num),
-   ba_quantity number(10),
+   ba_qauntity number(10),
    ba_price number(20),
    ba_size varchar2(20),
    ba_color varchar2(20),
@@ -68,9 +74,7 @@ create table basket(
    ba_category varchar2(20),
    ba_date date default sysdate
 );
-select * from basket;
-insert into table basket values(
-'1','jacket','1','1','230000','L','BLACK','BARBOUR','JACKET',sysdate);
+
 create table PRODUCT_order(
    Po_num number(10) primary key,
    Po_ba_num number(10) references basket(ba_num),
@@ -92,4 +96,3 @@ create table PRODUCT_order(
    Po_purdate date default sysdate,
    Po_comdate date
 );
-drop table customer cascade constraints;

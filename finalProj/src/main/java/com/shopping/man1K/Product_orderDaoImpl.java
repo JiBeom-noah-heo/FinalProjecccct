@@ -3,6 +3,10 @@ import java.util.Collection;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+<<<<<<< HEAD
+=======
+import lombok.Data;
+>>>>>>> refs/heads/master
 @Repository
 public class Product_orderDaoImpl implements Product_orderDao{
 	@Autowired
