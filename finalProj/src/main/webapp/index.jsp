@@ -8,12 +8,6 @@
 </head>
 <body>
 <script type="text/javascript">
-<<<<<<< HEAD
-=======
-
-//	location.href="basketList";
-
->>>>>>> refs/heads/master
 	location.href="home";
 </script>
 </body>

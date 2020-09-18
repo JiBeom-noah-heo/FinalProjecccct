@@ -7,18 +7,10 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias alias="customer" type="com.shopping.KM.Customer"/>
 		<typeAlias alias="basket" type="com.shopping.manSH.Basket"/>
 		<typeAlias alias="product" type="com.shopping.manJY.Product"/>
-<<<<<<< HEAD
-		<!-- <typeAlias alias="product_order" type="com.shopping.man1K.Product_order"/> -->
-=======
->>>>>>> refs/heads/master
 	</typeAliases>
 	<mappers>
 		<mapper	resource="customer.xml" />
 		<mapper	resource="basket.xml" />
 		<mapper	resource="product.xml" />
-<<<<<<< HEAD
-		<!-- <mapper	resource="product_order.xml" /> -->
-=======
->>>>>>> refs/heads/master
 	</mappers>
 </configuration>
