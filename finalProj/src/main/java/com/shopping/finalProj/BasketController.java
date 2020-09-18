@@ -10,14 +10,6 @@ import com.shopping.manSH.BasketService;
 public class BasketController {
 	@Autowired
 	private BasketService bs;
-	@RequestMapping("/home")
-	public String home() {
-		return "home";
-	}
-	@RequestMapping("/shop")
-	public String shop() {
-		return "shop";
-	}
 	@RequestMapping("/basketList")
 	public String basketList(Model model) {
 		Collection<Basket> list = bs.list();

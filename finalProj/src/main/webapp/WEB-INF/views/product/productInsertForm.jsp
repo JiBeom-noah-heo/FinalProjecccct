@@ -24,6 +24,12 @@
 				</td>
 		</tr>
 		<tr>
+			<th>가격</th>
+				<td>
+					<input type="number" name="p_price" required="required">
+				</td>
+		</tr>
+		<tr>
 			<th>상품명</th>
 				<td>
 					<input type="text" name="p_name" required="required" autofocus="autofocus">
