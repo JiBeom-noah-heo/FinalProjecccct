@@ -31,6 +31,8 @@ create table product_company(
    pc_tel varchar2(20)
 );
 drop table bascket cascade constraint;
+
+create sequence product_seq start with 1 increment BY 1 maxvalue 1000000;
 create table product(
    p_num number(10) primary key,
    p_pc_name varchar2(20) references product_company(pc_name),
