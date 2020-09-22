@@ -45,7 +45,7 @@ public class CustomerController {
 	}
 	@RequestMapping("/loginForm")
 	public String loginForm() {
-		return "loginForm";
+		return "loginForm"; 
 	}
 	@RequestMapping("/login")
 	public String login(Customer customer, Model model,HttpSession session) {
@@ -53,7 +53,7 @@ public class CustomerController {
 		Customer ct=cs.select(customer.getC_id());
 		if(ct==null || ct.getC_del().equals("y")) {
 			result=-1;
-		}else if(ct.getC_password().equals(ct.getC_password())) {
+		}else if(customer.getC_password().equals(ct.getC_password())) {
 			if(ct.getC_id().equals("master")) {
 				result=0;
 			}else {

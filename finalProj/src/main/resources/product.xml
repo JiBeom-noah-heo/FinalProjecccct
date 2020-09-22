@@ -15,23 +15,23 @@
 	<result property="p_discountrate" column="p_discountrate"/>
 	<result property="p_quantity" column="p_quantity"/>
 	<result property="p_like" column="p_like"/>
-	<result property="p_regdate" column="p_regdate"/>
+	<result property="p_regdate" column="p_regdate"/> 
 </resultMap>
-<select id="select" parameterType="string" resultType="product">
-	select * from product where p_name=#{p_name}
+<select id="select" parameterType="integer" resultType="product">
+	select * from product where p_num=#{p_num}
 </select>
 <insert id="insert" parameterType="product">
 		insert into product values ((select count(*)  from product)+1,#{p_pc_name},#{p_image},#{p_price},#{p_name},#{p_category},#{p_brand},#{p_size},#{p_discount},#{p_discountrate},#{p_quantity},0,sysdate)
 </insert>
 <select id="selectList" resultMap="productResult">
-	select * from product
+	select * from product order by p_num desc
 </select>
 <update id="update" parameterType="product">
 	update product set p_pc_name=#{p_pc_name},p_image=#{p_image},p_price=#{p_price},p_name=#{p_name},p_category=#{p_category},
 	p_brand=#{p_brand},p_size=#{p_size},p_discount=#{p_discount},p_discountrate=#{p_discountrate},
 	p_quantity=#{p_quantity} where p_num=#{p_num}
 </update>
-<delete id="delete" parameterType="string">
+<delete id="delete" parameterType="integer">
 	delete from product where p_num=#{p_num}
 </delete>
 </mapper>

@@ -6,7 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 import lombok.Data;
 @Data
 public class Product {
-	 private String p_num;
+	 private int p_num;
 	 private String p_pc_name;
 	 private String p_image;
 	 private int p_price;

@@ -65,7 +65,7 @@ public class ReviewServiceImpl implements ReviewService {
 	 
 	        //1.부모와 자식 분리
 	        for(Review boardReply: boardReplyList){
-	            if(boardReply.getDepth().equals("0")){
+	            if(boardReply.getPbr_depth() == 0){
 	                boardReplyListParent.add(boardReply);
 	            }else{
 	                boardReplyListChild.add(boardReply);
@@ -76,14 +76,14 @@ public class ReviewServiceImpl implements ReviewService {
 	        for(Review boardReplyParent: boardReplyListParent){
 	            //2-1. 부모는 무조건 넣는다.
 	            newBoardReplyList.add(boardReplyParent);
-	            //3.자식을 돌린다.
-	            for(Review boardReplyChild: boardReplyListChild){
-	                //3-1. 부모의 자식인 것들만 넣는다.
-	                if(boardReplyParent.getPbr_num().equals(boardReplyChild.getParent_id())){
-	                    newBoardReplyList.add(boardReplyChild);
-	                }
-	 
-	            }
+//	            //3.자식을 돌린다.
+//	            for(Review boardReplyChild: boardReplyListChild){
+//	                //3-1. 부모의 자식인 것들만 넣는다.
+//	                if(boardReplyParent.getPbr_num() == boardReplyChild.getParent_id()){
+//	                    newBoardReplyList.add(boardReplyChild);
+//	                }
+//	 
+//	            }
 	 
 	        }
 	 

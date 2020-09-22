@@ -116,15 +116,15 @@ public class ReviewController {
 		paramMap.put("password", password);
 
 		// 정보입력
-		/* int result = rs.regContent(); */
-
-		if (result > 0) {
-			retVal.put("code", "OK");
-			retVal.put("message", "등록에 성공 하였습니다.");
-		} else {
-			retVal.put("code", "FAIL");
-			retVal.put("message", "등록에 실패 하였습니다.");
-		}
+//		int result = rs.regContent(); 
+//
+//		if (result > 0) {
+//			retVal.put("code", "OK");
+//			retVal.put("message", "등록에 성공 하였습니다.");
+//		} else {
+//			retVal.put("code", "FAIL");
+//			retVal.put("message", "등록에 실패 하였습니다.");
+//		}
 
 		return retVal;
 

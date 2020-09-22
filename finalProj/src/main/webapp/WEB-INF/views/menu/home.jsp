@@ -110,7 +110,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                         </div>
-                        <div class="product__price">$ 59.0</div>
+                        <div class="product__price">50,000원</div>
                     </div>
                 </div>
             </div>
@@ -132,7 +132,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                         </div>
-                        <div class="product__price">$ 49.0</div>
+                        <div class="product__price">60,000원</div>
                     </div>
                 </div>
             </div>
@@ -155,7 +155,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                         </div>
-                        <div class="product__price">$ 59.0</div>
+                        <div class="product__price">50,000원</div>
                     </div>
                 </div>
             </div>
@@ -177,7 +177,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                         </div>
-                        <div class="product__price">$ 59.0</div>
+                        <div class="product__price">40,000원</div>
                     </div>
                 </div>
             </div>
@@ -199,7 +199,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                         </div>
-                        <div class="product__price">$ 59.0</div>
+                        <div class="product__price">60,000원</div>
                     </div>
                 </div>
             </div>
@@ -222,7 +222,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                         </div>
-                        <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
+                        <div class="product__price">50,000원 <span>50,000원</span></div>
                     </div>
                 </div>
             </div>
@@ -244,7 +244,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                         </div>
-                        <div class="product__price">$ 59.0</div>
+                        <div class="product__price">60,000원</div>
                     </div>
                 </div>
             </div>
@@ -267,7 +267,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                         </div>
-                        <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
+                        <div class="product__price">50,000원 <span>60,000원</span></div>
                     </div>
                 </div>
             </div>
@@ -332,7 +332,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <div class="product__price">$ 59.0</div>
+                            <div class="product__price">60,000원</div>
                         </div>
                     </div>
                     <div class="trend__item">
@@ -348,7 +348,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <div class="product__price">$ 59.0</div>
+                            <div class="product__price">60,000원</div>
                         </div>
                     </div>
                     <div class="trend__item">
@@ -364,7 +364,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <div class="product__price">$ 59.0</div>
+                            <div class="product__price">60,000원</div>
                         </div>
                     </div>
                 </div>
@@ -387,7 +387,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <div class="product__price">$ 59.0</div>
+                            <div class="product__price">50,000원</div>
                         </div>
                     </div>
                     <div class="trend__item">
@@ -403,7 +403,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <div class="product__price">$ 59.0</div>
+                            <div class="product__price">60,000원</div>
                         </div>
                     </div>
                     <div class="trend__item">
@@ -419,7 +419,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <div class="product__price">$ 59.0</div>
+                            <div class="product__price">60,000원</div>
                         </div>
                     </div>
                 </div>
@@ -442,7 +442,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <div class="product__price">$ 59.0</div>
+                            <div class="product__price">60,000원</div>
                         </div>
                     </div>
                     <div class="trend__item">
@@ -458,7 +458,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <div class="product__price">$ 59.0</div>
+                            <div class="product__price">60,000원</div>
                         </div>
                     </div>
                     <div class="trend__item">
@@ -474,7 +474,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <div class="product__price">$ 59.0</div>
+                            <div class="product__price">50,000원</div>
                         </div>
                     </div>
                 </div>

@@ -57,8 +57,8 @@ public class ProductController {
 		return "/product/productUpdate";
 	}
 	@RequestMapping("/productDetail")
-	public String productDetail(String name,Model model,HttpSession session) {
-		Product product = ps.select(name);
+	public String productDetail(int p_num,Model model,HttpSession session) {
+		Product product = ps.select(p_num);
 		model.addAttribute("product",product);
 		return "productDetail";
 	}

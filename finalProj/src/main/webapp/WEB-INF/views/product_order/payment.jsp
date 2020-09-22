@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div id="결제수단">
-	
+		
 	</div>
 
 	<div id="총 결제액수">

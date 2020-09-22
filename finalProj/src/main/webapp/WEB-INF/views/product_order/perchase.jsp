@@ -7,7 +7,6 @@
 <title>결제페이지</title>
 </head>
 <body>
-<<<<<<< HEAD
 	<div id="header"></div>
 	<div id="container">
 		<div class="wrap">
@@ -40,7 +39,6 @@
 	</div>
 	
 	<div id="footer"></div>
-=======
 	<table>
 		<tr>
 			<th>배송지</th>
@@ -58,6 +56,5 @@
 			<th>최종 결제정보</th>
 		</tr>
 	</table>
->>>>>>> refs/heads/master
 </body>
 </html>

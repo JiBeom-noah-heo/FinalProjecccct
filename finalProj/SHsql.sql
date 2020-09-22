@@ -90,3 +90,5 @@ create table PRODUCT_order(
    Po_comdate date
 );
 drop table customer cascade constraints;
+select * from product where p_num=2;
+update product set p_image='surf.jpg' where p_num=2;

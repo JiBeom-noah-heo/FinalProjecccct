@@ -110,3 +110,6 @@ create table PRODUCT_order(
    po_purdate date default sysdate,
    po_comdate date
 );
+select * from product;
+select * from product where p_num=2;
+update product set p_image='surf.jpg' where p_num=2;
